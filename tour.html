@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body data-bs-spy="scroll" data-bs-target="#navbarSupportedContent" data-bs-offset="100" tabindex="0">
+  <header id="header">
+  <nav class="navbar navbar-expand-lg position-fixed fixed-top py-3" aria-label="Main Navigation">
+    <div class="container navbar-container">
+      <a class="navbar-brand fw-bold" href="index.html" title="Back to Home">
+        <img src="images/logo.png" alt="logo image">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fa-solid fa-bars text-white"></i>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 d-flex justify-content-center align-items-center gap-3">
+          <li class="nav-item"><a class="nav-link active" href="#header">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="#tours">Tours</a></li>
+          <li class="nav-item"><a class="nav-link" href="planTrip.html">Plan Your Trip</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container min-vh-100 d-flex flex-column justify-content-center gap-4" data-aos="fade-up" data-aos-delay="100">
+    <div class="row g-4 content p-4 mt-5 mt-lg-4">
+      <div class="col-12">
+        
+        <div class="d-flex flex-column justify-content-center mt-5 hero">
+            <p class="text-white fst-italic fw-medium">Gateway to Timeless Adventures in Oman & the Emirates</p>
+          <h1 class="text-white fw-bold">
+            Discover the soul of Arabia with <span class="sahara">Sahara2Go</span> your trusted travel partner
+          </h1>
+          <p class="text-white">
+            For curated desert safaris, cultural escapes, coastal journeys, and mountain retreats. Whether you’re seeking the thrill of dune bashing in Wahiba Sands, a serene sunset cruise in Muscat, or the rich history of Nizwa and Sur — we bring the authentic essence of Oman and the Emirates to your fingertips.
+          </p>
+        </div>
+      </div>
+       <div class="row mt-2 g-4">
+        <div class="col-md-6 col-lg-3">
+          <div class="feature-box h-100 text-center d-flex flex-column justify-content-center align-items-center">
+            <div class="icon">
+              <i class="fas fa-user"></i> 
+            </div>
+            <h3>Live guide</h3>
+            <small>English, German</small>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+         <div class="feature-box h-100 text-center d-flex flex-column justify-content-center align-items-center">
+            <div class="icon"><i class="fas fa-headset"></i></div>
+            <h3>Ensures Seamless Support</h3>
+            <small>24/7 customer assistance</small>
+         </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="feature-box h-100 text-center d-flex flex-column justify-content-center align-items-center">
+             <div class="icon">
+              <i class="fas fa-calendar-alt"></i> 
+             </div>
+             <h3>Travelling Schedule</h3>
+             <small>Flexible travel dates</small>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="feature-box h-100 text-center d-flex flex-column justify-content-center align-items-center">
+            <div class="icon">
+              <i class="fas fa-map-marked-alt"></i>
+            </div> 
+            <h3>Destination Coverage</h3>
+            <small>25+ destinations</small>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+   
+  </div>
+ </header>
+ <main>
+    <section class="tours section-padding" id="tours">
+        <div class="container-fluid">
+           <div class="tours">
+              <div class="heading">
+                <div class="container">
+                  <div class="row g-4 align-items-center">
+                    <div class="col-lg-6 d-flex align-items-center">
+                      <div class="inner text-white">
+                        <h2>Explore Our Destination</h2>
+                      </div>
+                    </div>
+                    <div class="col-lg-6 d-flex align-items-center justify-content-center">
+                      <div class="inner text-white">
+                        <p>
+                          Discover the beauty of Arabia with our handpicked destinations across Oman and the Emirates.<br />
+                          From serene deserts to vibrant cities, every journey promises a unique adventure with Sahara2Go.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+           <div class="container">
+             <ul class="nav nav-pills mb-5 justify-content-center align-items-center gap-4" id="pills-tab" role="tablist">
+              <li class="nav-item" role="presentation"><button class="nav-link active" id="pills-all-tab" data-bs-toggle="pill" data-bs-target="#pills-all" type="button" role="tab" aria-controls="pills-all" aria-selected="true"> All</button></li>
+              <li class="nav-item" role="presentation"><button class="nav-link" id="pills-door-tab" data-bs-toggle="pill" data-bs-target="#pills-door" type="button" role="tab" aria-controls="pills-door" aria-selected="true">Oman</button></li>
+              <li class="nav-item" role="presentation"><button class="nav-link" id="pills-marble-tab" data-bs-toggle="pill" data-bs-target="#pills-marble" type="button" role="tab"  aria-controls="pills-marble" aria-selected="true">UEA</button></li>  
+            </ul>
+             <div class="tab-content" id="pills-tabContent">
+              <div class="tab-pane fade show active" id="pills-all" role="tabpanel" aria-labelledby="pills-all-tab" tabindex="0">
+                <div class="row g-4">
+                  <div class="col-md-6 col-lg-4">
+                    <div class="inner-img rounded position-relative overflow-hidden">
+                      <img src="images/tour1.jpg" class="w-100 d-block rounded" alt="wood-doors">
+                      <div class="layer d-flex flex-column justify-content-center p-4">
+                        <span class="place">Oman</span>
+                        <h3>Muscat City Tour</h3>
+                        <p class="text-white">Discover the rich culture through mosques, souqs, and seafront beauty.</p>
+                        <span class="text-white mb-3 date">Half Day - 34 OMR / Person</span>
+                        <span class="text-white mb-3 date">Full Day - 54 OMR / Person</span>
+                        <a href="https://wa.me/96892597488" target="_blank">Reserve Now</a>
+                      </div>
+                    </div>
+                  </div>
+                   <div class="col-md-6 col-lg-4">
+                    <div class="inner-img rounded position-relative overflow-hidden">
+                      <img src="images/about.jpeg" class="w-100 d-block rounded" alt="wood-doors">
+                      <div class="layer d-flex flex-column justify-content-center p-4">
+                        <span class="place">Oman</span>
+                        <h3>Sultan Qaboos Grand Mosque</h3>
+                        <p class="text-white">One of the largest and most beautiful mosques in Oman, located in Muscat.</p>
+                        <span class="text-white mb-3 date">Half Day - 34 OMR / Person</span>
+                        <span class="text-white mb-3 date">Full Day - 54 OMR / Person</span>
+                         <a href="https://wa.me/96892597488" target="_blank">Reserve Now</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6 col-lg-4">
+                    <div class="inner-img rounded position-relative overflow-hidden">
+                      <img src="images/tour3.jpg" class="w-100 d-block rounded" alt="wood-doors">
+                      <div class="layer d-flex flex-column justify-content-center p-4">
+                        <span class="place">Oman</span>
+                        <h3>National Museum, Muscat</h3>
+                        <p class="text-white">Showcases Oman's cultural heritage and history.</p>
+                        <span class="text-white mb-3 date">Half Day - 34 OMR / Person</span>
+                        <span class="text-white mb-3 date">Full Day - 54 OMR / Person</span>
+                         <a href="https://wa.me/96892597488" target="_blank">Reserve Now</a>
+                      </div>
+                    </div>
+                  </div>
+                   <div class="col-md-6 col-lg-4">
+                    <div class="inner-img rounded position-relative overflow-hidden">
+                      <img src="images/tour4.jpg" class="w-100 d-block rounded" alt="wood-doors">
+                      <div class="layer d-flex flex-column justify-content-center p-4">
+                        <span class="place">Oman</span>
+                        <h3>Bait Al Zubair Museum, Muscat</h3>
+                        <p class="text-white">A private museum offering a glimpse into Oman’s past.</p>
+                        <span class="text-white mb-3 date">Half Day - 34 OMR / Person</span>
+                        <span class="text-white mb-3 date">Full Day - 54 OMR / Person</span>
+                         <a href="https://wa.me/96892597488" target="_blank">Reserve Now</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6 col-lg-4">
+                    <div class="inner-img rounded position-relative overflow-hidden">
+                      <img src="images/tour5.jpg" class="w-100 d-block rounded" alt="wood-doors">
+                      <div class="layer d-flex flex-column justify-content-center p-4">
+                        <span class="place">Oman</span>
+                        <h3>Bait Al Baranda</h3>
+                        <p class="text-white">A cultural museum in Muscat showcasing the city’s history.</p>
+                        <span class="text-white mb-3 date">Half Day - 34 OMR / Person</span>
+                        <span class="text-white mb-3 date">Full Day - 54 OMR / Person</span>
+                         <a href="https://wa.me/96892597488" target="_blank">Reserve Now</a>
+                      </div>
+                    </div>
+                  </div>
+                   <div class="col-md-6 col-lg-4">
+                   <div class="inner-img rounded position-relative overflow-hidden">
+                      <img src="images/why-us-3.jpeg" class="w-100 d-block rounded" alt="wood-doors">
+                      <div class="layer d-flex flex-column justify-content-center p-4">
+                        <span class="place">Oman</span>
+                        <h3>Wahiba Sands</h3>
+                        <p class="text-white">Enjoy desert adventures like dune bashing and camel rides.</p>
+                        <span class="text-white mb-3 date">Half Day - 34 OMR / Person</span>
+                        <span class="text-white mb-3 date">Full Day - 54 OMR / Person</span>
+                         <a href="https://wa.me/96892597488" target="_blank">Reserve Now</a>
+                      </div>
+                    </div>
+                  </div>
+                   <div class="col-md-6 col-lg-4">
+                     <div class="inner-img rounded position-relative overflow-hidden">
+                      <img src="images/tour7.jpg" class="w-100 d-block rounded" alt="wood-doors">
+                      <div class="layer d-flex flex-column justify-content-center p-4">
+                        <span class="place">Oman</span>
+                        <h3>Adam Museum</h3>
+                        <p class="text-white">Located in the Al Dakhiliyah region, focused on Omani history and heritage.</p>
+                        <span class="text-white mb-3 date">Half Day - 34 OMR / Person</span>
+                        <span class="text-white mb-3 date">Full Day - 54 OMR / Person</span>
+                         <a href="https://wa.me/96892597488" target="_blank">Reserve Now</a>
+                      </div>
+                    </div>
+                  </div>
+                   <div class="col-md-6 col-lg-4">
+                    <div class="inner-img rounded position-relative overflow-hidden">
+                      <img src="images/tour6.jpg" class="w-100 d-block rounded" alt="wood-doors">
+                      <div class="layer d-flex flex-column justify-content-center p-4">
+                        <span class="place">Oman</span>
+                        <h3>Bait Al Ghasam</h3>
+                        <p class="text-white">A traditional Omani house turned cultural site (less known, but potentially a heritage house).</p>
+                        <span class="text-white mb-3 date">Half Day - 34 OMR / Person</span>
+                        <span class="text-white mb-3 date">Full Day - 54 OMR / Person</span>
+                        <a href="https://wa.me/96892597488" target="_blank">Reserve Now</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6 col-lg-4">
+                      <div class="inner-img rounded position-relative overflow-hidden">
+                      <img src="images/tour6.jpg" class="w-100 d-block rounded" alt="wood-doors">
+                      <div class="layer d-flex flex-column justify-content-center p-4">
+                        <span class="place">Oman</span>
+                        <h3>Mutrah Fort</h3>
+                        <p class="text-white">Historic fort overlooking Mutrah.</p>
+                        <span class="text-white mb-3 date">Half Day - 34 OMR / Person</span>
+                        <span class="text-white mb-3 date">Full Day - 54 OMR / Person</span>
+                         <a href="https://wa.me/96892597488" target="_blank">Reserve Now</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6 col-lg-4">
+                    <div class="inner-img rounded position-relative overflow-hidden">
+                      <img src="images/tour9.jpg" class="w-100 d-block rounded" alt="wood-doors">
+                      <div class="layer d-flex flex-column justify-content-center p-4">
+                        <span class="place">Oman</span>
+                        <h3>Qasr Al Alam Palace</h3>
+                        <p class="text-white">The ceremonial palace of His Majesty in Muscat.</p>
+                        <span class="text-white mb-3 date">Half Day - 34 OMR / Person</span>
+                        <span class="text-white mb-3 date">Full Day - 54 OMR / Person</span>
+                         <a href="https://wa.me/96892597488" target="_blank">Reserve Now</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6 col-lg-4">
+                    <div class="inner-img rounded position-relative overflow-hidden">
+                      <img src="images/tour10.jpeg" class="w-100 d-block rounded" alt="wood-doors">
+                      <div class="layer d-flex flex-column justify-content-center p-4">
+                        <span class="place">Oman</span>
+                        <h3>Al Jalali and Al Mirani Forts</h3>
+                        <p class="text-white">Two iconic forts guarding Muscat's harbor.</p>
+                        <span class="text-white mb-3 date">Half Day - 34 OMR / Person</span>
+                        <span class="text-white mb-3 date">Full Day - 54 OMR / Person</span>
+                         <a href="https://wa.me/96892597488" target="_blank">Reserve Now</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6 col-lg-4">
+                     <div class="inner-img rounded position-relative overflow-hidden">
+                      <img src="images/tour11.jpg" class="w-100 d-block rounded" alt="wood-doors">
+                      <div class="layer d-flex flex-column justify-content-center p-4">
+                        <span class="place">Oman</span>
+                        <h3>Nakhal Fort</h3>
+                        <p class="text-white">A well-preserved fort located in Al Batinah region.</p>
+                        <span class="text-white mb-3 date">Half Day - 34 OMR / Person</span>
+                        <span class="text-white mb-3 date">Full Day - 54 OMR / Person</span>
+                         <a href="https://wa.me/96892597488" target="_blank">Reserve Now</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6 col-lg-4">
+                     <div class="inner-img rounded position-relative overflow-hidden">
+                      <img src="images/tour12.jpg" class="w-100 d-block rounded" alt="wood-doors">
+                      <div class="layer d-flex flex-column justify-content-center p-4">
+                        <span class="place">Oman</span>
+                        <h3>Al Hazm Fort</h3>
+                        <p class="text-white">Famous for its Islamic architectural design in Rustaq.</p>
+                        <span class="text-white mb-3 date">Half Day - 34 OMR / Person</span>
+                        <span class="text-white mb-3 date">Full Day - 54 OMR / Person</span>
+                         <a href="https://wa.me/96892597488" target="_blank">Reserve Now</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6 col-lg-4">
+                   <div class="inner-img rounded position-relative overflow-hidden">
+                      <img src="images/tour13.jpg" class="w-100 d-block rounded" alt="wood-doors">
+                      <div class="layer d-flex flex-column justify-content-center p-4">
+                        <span class="place">Oman</span>
+                        <h3>Mutrah Corniche</h3>
+                        <p class="text-white">A scenic seaside promenade in Muscat, great for walks and sunset views.</p>
+                        <span class="text-white mb-3 date">Half Day - 34 OMR / Person</span>
+                        <span class="text-white mb-3 date">Full Day - 54 OMR / Person</span>
+                         <a href="https://wa.me/96892597488" target="_blank">Reserve Now</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6 col-lg-4">
+                    <div class="inner-img rounded position-relative overflow-hidden">
+                      <img src="images/tour14.jpg" class="w-100 d-block rounded" alt="wood-doors">
+                      <div class="layer d-flex flex-column justify-content-center p-4">
+                        <span class="place">Oman</span>
+                        <h3>Fish Market, Muscat</h3>
+                        <p class="text-white">A local market offering a vibrant look at Omani seafood culture.</p>
+                        <span class="text-white mb-3 date">Half Day - 34 OMR / Person</span>
+                        <span class="text-white mb-3 date">Full Day - 54 OMR / Person</span>
+                         <a href="https://wa.me/96892597488" target="_blank">Reserve Now</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6 col-lg-4">
+                     <div class="inner-img rounded position-relative overflow-hidden">
+                      <img src="images/tour18.jpg" class="w-100 d-block rounded" alt="wood-doors">
+                      <div class="layer d-flex flex-column justify-content-center p-4">
+                        <span class="place">UEA</span>
+                        <h3>Burj Khalifa, Dubai</h3>
+                        <p class="text-white">Experience the tallest skyscraper in the world.</p>
+                        <a href="https://wa.me/96892597488" target="_blank" class="mt-5">Reserve Now</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6 col-lg-4">
+                     <div class="inner-img rounded position-relative overflow-hidden">
+                      <img src="images/tour19.jpg" class="w-100 d-block rounded" alt="wood-doors">
+                      <div class="layer d-flex flex-column justify-content-center p-4">
+                        <span class="place">UEA</span>
+                        <h3>Atlantis, The Palm</h3>
+                        <p class="text-white">A luxurious resort with an aquarium and thrilling waterpark.</p>
+                        <a href="https://wa.me/96892597488" target="_blank" class="mt-4">Reserve Now</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6 col-lg-4">
+                     <div class="inner-img rounded position-relative overflow-hidden">
+                      <img src="images/tour8.jpg" class="w-100 d-block rounded" alt="wood-doors">
+                      <div class="layer d-flex flex-column justify-content-center p-4">
+                        <span class="place">UEA</span>
+                        <h3>Dubai Marina</h3>
+                        <p class="text-white">Modern skyline, luxury yachts, and nightlife vibes.</p>
+                        <a href="https://wa.me/96892597488" target="_blank" class="mt-4">Reserve Now</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6 col-lg-4">
+                   <div class="inner-img rounded position-relative overflow-hidden">
+                      <img src="images/tour17.jpg" class="w-100 d-block rounded" alt="wood-doors">
+                      <div class="layer d-flex flex-column justify-content-center p-4">
+                        <span class="place">UEA</span>
+                        <h3>The Dubai Mall & Aquarium</h3>
+                        <p class="text-white">Shop and explore marine life in one spot.</p>
+                        <a href="https://wa.me/96892597488" target="_blank" class="mt-5">Reserve Now</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6 col-lg-4">
+                     <div class="inner-img rounded position-relative overflow-hidden">
+                      <img src="images/tour20.jpg" class="w-100 d-block rounded" alt="wood-doors">
+                      <div class="layer d-flex flex-column justify-content-center p-4">
+                        <span class="place">UEA</span>
+                        <h3>Global Village</h3>
+                        <p class="text-white">A multicultural theme park with food, shopping, and shows.</p>
+                        <a href="https://wa.me/96892597488" target="_blank" class="mt-4">Reserve Now</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6 col-lg-4">
+                     <div class="inner-img rounded position-relative overflow-hidden">
+                      <img src="images/tour15.jpg" class="w-100 d-block rounded" alt="wood-doors">
+                      <div class="layer d-flex flex-column justify-content-center p-4">
+                        <span class="place">UEA</span>
+                        <h3>Sheikh Zayed Grand Mosque</h3>
+                        <p class="text-white">A magnificent blend of Islamic architecture and peace.</p>
+                        <a href="https://wa.me/96892597488" target="_blank" class="mt-4">Reserve Now</a>
+                      </div>
+                    </div>
+                  </div>
+                
+                </div>
+              </div>
+              <div class="tab-pane fade" id="pills-door" role="tabpanel" aria-labelledby="pills-door-tab" tabindex="0">
+                <div class="row g-4">
+                      <div class="col-md-6 col-lg-4">
+                    <div class="inner-img rounded position-relative overflow-hidden">
+                      <img src="images/tour1.jpg" class="w-100 d-block rounded" alt="wood-doors">
+                      <div class="layer d-flex flex-column justify-content-center p-4">
+                        <span class="place">Oman</span>
+                        <h3>Muscat City Tour</h3>
+                        <p class="text-white">Discover the rich culture through mosques, souqs, and seafront beauty.</p>
+                        <span class="text-white mb-3 date">Half Day - 34 OMR / Person</span>
+                        <span class="text-white mb-3 date">Full Day - 54 OMR / Person</span>
+                        <a href="https://wa.me/96892597488" target="_blank">Reserve Now</a>
+                      </div>
+                    </div>
+                  </div>
+                   <div class="col-md-6 col-lg-4">
+                    <div class="inner-img rounded position-relative overflow-hidden">
+                      <img src="images/about.jpeg" class="w-100 d-block rounded" alt="wood-doors">
+                      <div class="layer d-flex flex-column justify-content-center p-4">
+                        <span class="place">Oman</span>
+                        <h3>Sultan Qaboos Grand Mosque</h3>
+                        <p class="text-white">One of the largest and most beautiful mosques in Oman, located in Muscat.</p>
+                        <span class="text-white mb-3 date">Half Day - 34 OMR / Person</span>
+                        <span class="text-white mb-3 date">Full Day - 54 OMR / Person</span>
+                        <a href="https://wa.me/96892597488" target="_blank">Reserve Now</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6 col-lg-4">
+                    <div class="inner-img rounded position-relative overflow-hidden">
+                      <img src="images/tour3.jpg" class="w-100 d-block rounded" alt="wood-doors">
+                      <div class="layer d-flex flex-column justify-content-center p-4">
+                        <span class="place">Oman</span>
+                        <h3>National Museum, Muscat</h3>
+                        <p class="text-white">Showcases Oman's cultural heritage and history.</p>
+                        <span class="text-white mb-3 date">Half Day - 34 OMR / Person</span>
+                        <span class="text-white mb-3 date">Full Day - 54 OMR / Person</span>
+                        <a href="https://wa.me/96892597488" target="_blank" class="mt-3">Reserve Now</a>
+                      </div>
+                    </div>
+                  </div>
+                   <div class="col-md-6 col-lg-4">
+                    <div class="inner-img rounded position-relative overflow-hidden">
+                      <img src="images/tour4.jpg" class="w-100 d-block rounded" alt="wood-doors">
+                      <div class="layer d-flex flex-column justify-content-center p-4">
+                        <span class="place">Oman</span>
+                        <h3>Bait Al Zubair Museum, Muscat</h3>
+                        <p class="text-white">A private museum offering a glimpse into Oman’s past.</p>
+                        <span class="text-white mb-3 date">Half Day - 34 OMR / Person</span>
+                        <span class="text-white mb-3 date">Full Day - 54 OMR / Person</span>
+                        <a href="https://wa.me/96892597488" target="_blank" class="mt-3">Reserve Now</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6 col-lg-4">
+                    <div class="inner-img rounded position-relative overflow-hidden">
+                      <img src="images/tour5.jpg" class="w-100 d-block rounded" alt="wood-doors">
+                      <div class="layer d-flex flex-column justify-content-center p-4">
+                        <span class="place">Oman</span>
+                        <h3>Bait Al Baranda</h3>
+                        <p class="text-white">A cultural museum in Muscat showcasing the city’s history.</p>
+                        <span class="text-white mb-3 date">Half Day - 34 OMR / Person</span>
+                        <span class="text-white mb-3 date">Full Day - 54 OMR / Person</span>
+                        <a href="https://wa.me/96892597488" target="_blank" class="mt-5">Reserve Now</a>
+                      </div>
+                    </div>
+                  </div>
+                   <div class="col-md-6 col-lg-4">
+                   <div class="inner-img rounded position-relative overflow-hidden">
+                      <img src="images/why-us-3.jpeg" class="w-100 d-block rounded" alt="wood-doors">
+                      <div class="layer d-flex flex-column justify-content-center p-4">
+                        <span class="place">Oman</span>
+                        <h3>Wahiba Sands</h3>
+                        <p class="text-white">Enjoy desert adventures like dune bashing and camel rides.</p>
+                        <span class="text-white mb-3 date">Half Day - 34 OMR / Person</span>
+                        <span class="text-white mb-3 date">Full Day - 54 OMR / Person</span>
+                        <a href="https://wa.me/96892597488" target="_blank" class="mt-5">Reserve Now</a>
+                      </div>
+                    </div>
+                  </div>
+                   <div class="col-md-6 col-lg-4">
+                     <div class="inner-img rounded position-relative overflow-hidden">
+                      <img src="images/tour7.jpg" class="w-100 d-block rounded" alt="wood-doors">
+                      <div class="layer d-flex flex-column justify-content-center p-4">
+                        <span class="place">Oman</span>
+                        <h3>Adam Museum</h3>
+                        <p class="text-white">Located in the Al Dakhiliyah region, focused on Omani history and heritage.</p>
+                        <span class="text-white mb-3 date">Half Day - 34 OMR / Person</span>
+                        <span class="text-white mb-3 date">Full Day - 54 OMR / Person</span>
+                        <a href="https://wa.me/96892597488" target="_blank">Reserve Now</a>
+                      </div>
+                    </div>
+                  </div>
+                   <div class="col-md-6 col-lg-4">
+                    <div class="inner-img rounded position-relative overflow-hidden">
+                      <img src="images/tour6.jpg" class="w-100 d-block rounded" alt="wood-doors">
+                      <div class="layer d-flex flex-column justify-content-center p-4">
+                        <span class="place">Oman</span>
+                        <h3>Bait Al Ghasam</h3>
+                        <p class="text-white">A traditional Omani house turned cultural site (less known, but potentially a heritage house).</p>
+                        <span class="text-white mb-3 date">Half Day - 34 OMR / Person</span>
+                        <span class="text-white mb-3 date">Full Day - 54 OMR / Person</span>
+                        <a href="https://wa.me/96892597488" target="_blank">Reserve Now</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6 col-lg-4">
+                      <div class="inner-img rounded position-relative overflow-hidden">
+                      <img src="images/tour6.jpg" class="w-100 d-block rounded" alt="wood-doors">
+                      <div class="layer d-flex flex-column justify-content-center p-4">
+                        <span class="place">Oman</span>
+                        <h3>Mutrah Fort</h3>
+                        <p class="text-white">Historic fort overlooking Mutrah.</p>
+                        <span class="text-white mb-3 date">Half Day - 34 OMR / Person</span>
+                        <span class="text-white mb-3 date">Full Day - 54 OMR / Person</span>
+                        <a href="https://wa.me/96892597488" target="_blank">Reserve Now</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6 col-lg-4">
+                    <div class="inner-img rounded position-relative overflow-hidden">
+                      <img src="images/tour9.jpg" class="w-100 d-block rounded" alt="wood-doors">
+                      <div class="layer d-flex flex-column justify-content-center p-4">
+                        <span class="place">Oman</span>
+                        <h3>Qasr Al Alam Palace</h3>
+                        <p class="text-white">The ceremonial palace of His Majesty in Muscat.</p>
+                        <span class="text-white mb-3 date">Half Day - 34 OMR / Person</span>
+                        <span class="text-white mb-3 date">Full Day - 54 OMR / Person</span>
+                        <a href="https://wa.me/96892597488" target="_blank" class="mt-4">Reserve Now</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6 col-lg-4">
+                    <div class="inner-img rounded position-relative overflow-hidden">
+                      <img src="images/tour10.jpeg" class="w-100 d-block rounded" alt="wood-doors">
+                      <div class="layer d-flex flex-column justify-content-center p-4">
+                        <span class="place">Oman</span>
+                        <h3>Al Jalali and Al Mirani Forts</h3>
+                        <p class="text-white">Two iconic forts guarding Muscat's harbor.</p>
+                        <span class="text-white mb-3 date">Half Day - 34 OMR / Person</span>
+                        <span class="text-white mb-3 date">Full Day - 54 OMR / Person</span>
+                        <a href="https://wa.me/96892597488" target="_blank" class="mt-4">Reserve Now</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6 col-lg-4">
+                     <div class="inner-img rounded position-relative overflow-hidden">
+                      <img src="images/tour11.jpg" class="w-100 d-block rounded" alt="wood-doors">
+                      <div class="layer d-flex flex-column justify-content-center p-4">
+                        <span class="place">Oman</span>
+                        <h3>Nakhal Fort</h3>
+                        <p class="text-white">A well-preserved fort located in Al Batinah region.</p>
+                        <span class="text-white mb-3 date">Half Day - 34 OMR / Person</span>
+                        <span class="text-white mb-3 date">Full Day - 54 OMR / Person</span>
+                        <a href="https://wa.me/96892597488" target="_blank" class="mt-4">Reserve Now</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6 col-lg-4">
+                     <div class="inner-img rounded position-relative overflow-hidden">
+                      <img src="images/tour12.jpg" class="w-100 d-block rounded" alt="wood-doors">
+                      <div class="layer d-flex flex-column justify-content-center p-4">
+                        <span class="place">Oman</span>
+                        <h3>Al Hazm Fort</h3>
+                        <p class="text-white">Famous for its Islamic architectural design in Rustaq.</p>
+                        <span class="text-white mb-3 date">Half Day - 34 OMR / Person</span>
+                        <span class="text-white mb-3 date">Full Day - 54 OMR / Person</span>
+                        <a href="https://wa.me/96892597488" target="_blank" class="mt-4">Reserve Now</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6 col-lg-4">
+                   <div class="inner-img rounded position-relative overflow-hidden">
+                      <img src="images/tour13.jpg" class="w-100 d-block rounded" alt="wood-doors">
+                      <div class="layer d-flex flex-column justify-content-center p-4">
+                        <span class="place">Oman</span>
+                        <h3>Mutrah Corniche</h3>
+                        <p class="text-white">A scenic seaside promenade in Muscat, great for walks and sunset views.</p>
+                        <span class="text-white mb-3 date">Half Day - 34 OMR / Person</span>
+                        <span class="text-white mb-3 date">Full Day - 54 OMR / Person</span>
+                        <a href="https://wa.me/96892597488" target="_blank" class="mt-4">Reserve Now</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6 col-lg-4">
+                    <div class="inner-img rounded position-relative overflow-hidden">
+                      <img src="images/tour14.jpg" class="w-100 d-block rounded" alt="wood-doors">
+                      <div class="layer d-flex flex-column justify-content-center p-4">
+                        <span class="place">Oman</span>
+                        <h3>Fish Market, Muscat</h3>
+                        <p class="text-white">A local market offering a vibrant look at Omani seafood culture.</p>
+                        <span class="text-white mb-3 date">Half Day - 34 OMR / Person</span>
+                        <span class="text-white mb-3 date">Full Day - 54 OMR / Person</span>
+                        <a href="https://wa.me/96892597488" target="_blank" class="mt-4">Reserve Now</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="pills-marble" role="tabpanel" aria-labelledby="pills-marble-tab" tabindex="0">
+                <div class="row g-4">
+                 <div class="col-md-6 col-lg-4">
+                     <div class="inner-img rounded position-relative overflow-hidden">
+                      <img src="images/tour18.jpg" class="w-100 d-block rounded" alt="wood-doors">
+                      <div class="layer d-flex flex-column justify-content-center p-4">
+                        <span class="place">UEA</span>
+                        <h3>Burj Khalifa, Dubai</h3>
+                        <p class="text-white">Experience the tallest skyscraper in the world.</p>
+                        <a href="https://wa.me/96892597488" target="_blank" class="mt-5">Reserve Now</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6 col-lg-4">
+                     <div class="inner-img rounded position-relative overflow-hidden">
+                      <img src="images/tour19.jpg" class="w-100 d-block rounded" alt="wood-doors">
+                      <div class="layer d-flex flex-column justify-content-center p-4">
+                        <span class="place">UEA</span>
+                        <h3>Atlantis, The Palm</h3>
+                        <p class="text-white">A luxurious resort with an aquarium and thrilling waterpark.</p>
+                        <a href="https://wa.me/96892597488" target="_blank" class="mt-4">Reserve Now</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6 col-lg-4">
+                     <div class="inner-img rounded position-relative overflow-hidden">
+                      <img src="images/tour8.jpg" class="w-100 d-block rounded" alt="wood-doors">
+                      <div class="layer d-flex flex-column justify-content-center p-4">
+                        <span class="place">UEA</span>
+                        <h3>Dubai Marina</h3>
+                        <p class="text-white">Modern skyline, luxury yachts, and nightlife vibes.</p>
+                        <a href="https://wa.me/96892597488" target="_blank" class="mt-4">Reserve Now</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6 col-lg-4">
+                   <div class="inner-img rounded position-relative overflow-hidden">
+                      <img src="images/tour17.jpg" class="w-100 d-block rounded" alt="wood-doors">
+                      <div class="layer d-flex flex-column justify-content-center p-4">
+                        <span class="place">UEA</span>
+                        <h3>The Dubai Mall & Aquarium</h3>
+                        <p class="text-white">Shop and explore marine life in one spot.</p>
+                        <a href="https://wa.me/96892597488" target="_blank" class="mt-5">Reserve Now</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6 col-lg-4">
+                     <div class="inner-img rounded position-relative overflow-hidden">
+                      <img src="images/tour20.jpg" class="w-100 d-block rounded" alt="wood-doors">
+                      <div class="layer d-flex flex-column justify-content-center p-4">
+                        <span class="place">UEA</span>
+                        <h3>Global Village</h3>
+                        <p class="text-white">A multicultural theme park with food, shopping, and shows.</p>
+                        <a href="https://wa.me/96892597488" target="_blank" class="mt-4">Reserve Now</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6 col-lg-4">
+                     <div class="inner-img rounded position-relative overflow-hidden">
+                      <img src="images/tour15.jpg" class="w-100 d-block rounded" alt="wood-doors">
+                      <div class="layer d-flex flex-column justify-content-center p-4">
+                        <span class="place">UEA</span>
+                        <h3>Sheikh Zayed Grand Mosque</h3>
+                        <p class="text-white">A magnificent blend of Islamic architecture and peace.</p>
+                        <a href="https://wa.me/96892597488" target="_blank" class="mt-4">Reserve Now</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+        
+            </div>
+           </div>
+        </div>
+    </section>
+
+    <section class="section-padding gallery">
+      <div class="container">
+        <div class="heading text-center mb-5">
+          <h2>Uncover Countless More Wonders Across Oman & the Emirates!</h2>
+        </div>
+         <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide"><img src="images/gallery/img1.jpg" alt="Image 1" /></div>
+              <div class="swiper-slide"><img src="images/gallery/img2.jpg" alt="Image 2" /></div>
+              <div class="swiper-slide"><img src="images/gallery/img3.jpg" alt="Image 3" /></div>
+              <div class="swiper-slide"><img src="images/gallery/img4.jpg" alt="Image 4" /></div>
+              <div class="swiper-slide"><img src="images/gallery/img5.jpg" alt="Image 4" /></div>
+              <div class="swiper-slide"><img src="images/gallery/img6.jpg" alt="Image 5" /></div>
+              <div class="swiper-slide"><img src="images/gallery/img7.jpg" alt="Image 5" /></div>
+              <div class="swiper-slide"><img src="images/gallery/img8.jpg" alt="Image 5" /></div>
+              <div class="swiper-slide"><img src="images/gallery/img9.jpg" alt="Image 5" /></div>
+              <div class="swiper-slide"><img src="images/gallery/img10.jpg" alt="Image 5" /></div>
+              <div class="swiper-slide"><img src="images/gallery/img11.jpg" alt="Image 5" /></div>
+              <div class="swiper-slide"><img src="images/gallery/img12.jpg" alt="Image 5" /></div>
+              <div class="swiper-slide"><img src="images/gallery/img13.jpg" alt="Image 5" /></div>
+              <div class="swiper-slide"><img src="images/gallery/img14.jpg" alt="Image 5" /></div>
+              <div class="swiper-slide"><img src="images/gallery/img15.jpg" alt="Image 5" /></div>
+              <div class="swiper-slide"><img src="images/gallery/img16.jpg" alt="Image 5" /></div>
+              <div class="swiper-slide"><img src="images/gallery/img17.jpg" alt="Image 5" /></div>
+              <div class="swiper-slide"><img src="images/gallery/img18.jpg" alt="Image 5" /></div>
+              <div class="swiper-slide"><img src="images/gallery/img19.jpg" alt="Image 5" /></div>
+              <div class="swiper-slide"><img src="images/gallery/img20.jpg" alt="Image 5" /></div>
+              <div class="swiper-slide"><img src="images/gallery/img21.jpg" alt="Image 5" /></div>
+              <div class="swiper-slide"><img src="images/gallery/img22.jpg" alt="Image 5" /></div>
+              <div class="swiper-slide"><img src="images/gallery/img23.jpg" alt="Image 5" /></div>
+              <div class="swiper-slide"><img src="images/gallery/img24.jpg" alt="Image 5" /></div>
+              <div class="swiper-slide"><img src="images/gallery/img25.jpg" alt="Image 5" /></div>
+              <div class="swiper-slide"><img src="images/gallery/img26.jpg" alt="Image 5" /></div>
+              <div class="swiper-slide"><img src="images/gallery/img27.jpg" alt="Image 5" /></div>
+              <div class="swiper-slide"><img src="images/gallery/img28.jpg" alt="Image 5" /></div>
+              <div class="swiper-slide"><img src="images/gallery/img29.jpg" alt="Image 5" /></div>
+              <div class="swiper-slide"><img src="images/gallery/img30.jpg" alt="Image 5" /></div>
+              <div class="swiper-slide"><img src="images/gallery/img31.jpg" alt="Image 5" /></div>
+              <div class="swiper-slide"><img src="images/gallery/img32.jpg" alt="Image 5" /></div>
+              <div class="swiper-slide"><img src="images/gallery/img33.jpg" alt="Image 5" /></div>
+              <div class="swiper-slide"><img src="images/gallery/img34.jpg" alt="Image 5" /></div>
+              <div class="swiper-slide"><img src="images/gallery/img35.jpg" alt="Image 5" /></div>
+              <div class="swiper-slide"><img src="images/gallery/img36.jpg" alt="Image 5" /></div>
+              <div class="swiper-slide"><img src="images/gallery/img37.jpg" alt="Image 5" /></div>
+              <div class="swiper-slide"><img src="images/gallery/img38.jpg" alt="Image 5" /></div>
+              <div class="swiper-slide"><img src="images/gallery/img39.jpg" alt="Image 5" /></div>
+              <div class="swiper-slide"><img src="images/gallery/img40.jpg" alt="Image 5" /></div>
+              <div class="swiper-slide"><img src="images/gallery/img41.jpg" alt="Image 5" /></div>
+              <div class="swiper-slide"><img src="images/gallery/img42.jpg" alt="Image 5" /></div>
+              <div class="swiper-slide"><img src="images/gallery/img43.jpg" alt="Image 5" /></div>
+              <div class="swiper-slide"><img src="images/gallery/img44.jpg" alt="Image 5" /></div>
+              <div class="swiper-slide"><img src="images/gallery/img45.jpg" alt="Image 5" /></div>
+              <div class="swiper-slide"><img src="images/gallery/img46.jpg" alt="Image 5" /></div>
+              <div class="swiper-slide"><img src="images/gallery/img47.jpg" alt="Image 5" /></div>
+              <div class="swiper-slide"><img src="images/gallery/img48.jpg" alt="Image 5" /></div>
+              <div class="swiper-slide"><img src="images/gallery/img49.jpg" alt="Image 5" /></div>
+              <div class="swiper-slide"><img src="images/gallery/img50.jpg" alt="Image 5" /></div>
+              
+            </div>
+          <!-- Pagination -->
+          <div class="swiper-pagination"></div>
+
+          <!-- Navigation buttons -->
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
+ 
+      </div>
+    </section>
+ </main>
+  <footer class="footer bg-dark text-white">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4 mb-4 mb-lg-0">
+          <a class="navbar-brand fw-bold" href="index.html" title="العودة للصفحة الرئيسية">
+           <img src="images/logo.png" alt="logo image">
+         </a>
+           <p  class="text-white pe-lg-5">
+            Discover the magic of the Arabian sands with Sahara2Go, your trusted travel partner for desert safaris, cultural tours, and unforgettable excursions across Oman and the Emirates.
+          </p>
+          <div class="social-links">
+            <a href="https://www.instagram.com/sahara2go2025/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.facebook.com/Sahara2go/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://www.youtube.com/@SaharaTogo" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-4 mb-6 mb-md-0 ">
+         <div class="footer-content d-flex flex-column justify-content-center ">
+           <h5>Popular Destination</h5>
+          <ul class="footer-links">
+            <li><a href="#tours">Muscat City Discovery</a></li>
+            <li><a href="#tours">Cultural Gems of Muscat</a></li>
+            <li><a href="#tours">Nakhl Fort & Ain Thowara</a></li>
+            <li><a href="#tours">Falaj Irrigation</a></li>
+            <li><a href="#tours">Explore More</a></li>
+          </ul>
+         </div>
+        </div>
+        <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+          <div class="footer-content d-flex flex-column justify-content-center">
+          <ul class="footer-links">
+            <li>
+              <h6>Office Address</h6>
+              <p>Muscat, Al Khoud, Mazoon Street, Oman</p>
+            </li>
+            <li><a href="https://wa.me/96892597488" target="_blank"><span>WhatsApp Us:</span> <br> +968 9808 3317</a></li>
+            <li>
+              <h6>Email Address</h6>
+              <p>info@sahara2go.com</p>
+            </li>
+          </ul>
+          </div>
+        </div>
+      </div>
+      <hr class="footer-divider">
+      <div class="row footer-bottom justify-content-center align-items-center">
+        <div class="col-md-6">
+          <p class="text-center">Allright Reserved - Sahara2Go 2025</p>
+        </div>
+        <div class="col-md-6 end-text">
+           <div class="d-flex justify-content-center align-items-center gap-2">
+                  <span class="text-center">Design and programming by</span>
+                  <div class="gmt-logo">
+                    <a href="https://www.facebook.com/profile.php?id=100090592885243&mibextid=ZbWKwL" target="_blank" class=""><img src="images/GMT.png" alt="GMT logo" class="GMT"></a>
+                  </div>
+                </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+ <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
