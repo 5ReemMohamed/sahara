@@ -29,6 +29,20 @@ body{
 .section-padding{
   padding: 130px 0;
 }
+.navbar-toggler {
+    font-size:17px;
+    line-height: 1;
+    background-color: transparent;
+    border: 1px solid var(--secondary) !important;
+}
+.navbar-toggler  i{
+    color: var(--secondary);
+}
+.navbar-toggler:focus{
+    border: 1px solid var(--secondary) !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
 header{
     background-image: linear-gradient(rgba(17, 22, 30,.5)),url(../images/header.jpg);
     background-position: center;
@@ -131,7 +145,7 @@ header  .feature-box:hover .icon{
   width: 100%;
   display: block;
 }
- .feature-box {
+.feature-box {
       background: rgba(0,0,0,0.4);
       border-radius: 10px;
       padding: 35px 0px;
@@ -369,14 +383,14 @@ header  .feature-box:hover .icon{
   font-style: italic;
   font-family: "Kalam", cursive;
 }
-.content-section h2,.vision h2,.services-section h2,.tours h2,.gallery h2,.hotel h2,.flight h2,.reserve h2,.contact h2{
+.content-section h2,.vision h2,.services-section h2,.tours h2,.gallery h2,.hotel h2,.flight h2,.reserve h2,.contact h2,.oman-video h2{
   color: var(--primary-color);
   font-size: 1.4rem;
   font-weight: 700;
   line-height: 125%;
   margin-bottom: 25px;
 }
-.content-section p,.vision p,.tours .heading p,.hotel p,.flight p,.contact .heading p{
+.content-section p,.vision p,.tours .heading p,.hotel p,.flight p,.contact .heading p,.oman-video p{
     font-size: 16px;
     font-weight: 400;
     line-height: 28px;
@@ -946,7 +960,7 @@ footer .gmt-logo{
   .choose-us h2{
   font-size: 2.7rem;
 }
-  .content-section h2,.vision h2,.services-section h2,.tours h2,.gallery h2,.hotel h2,.flight h2,.reserve h2,.contact h2{
+  .content-section h2,.vision h2,.services-section h2,.tours h2,.gallery h2,.hotel h2,.flight h2,.reserve h2,.contact h2,.oman-video h2{
   font-size: 2.8rem;
 }
  .destination .inner .layer {
@@ -1009,6 +1023,55 @@ footer .gmt-logo{
   width: 60%;
 
 }
+}
+  .fixed-contact-buttons {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  z-index: 1050;
+}
+.fixed-scroll{
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  z-index: 1050;
+}
+.whatsapp-button {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #25D366; 
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 22px;
+  transition: background-color 0.3s ease;
+}
+
+
+.whatsapp-button:hover {
+  background-color: #1da851;
+}
+.scroll-top {
+  background-color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  left: 0%;
+  color: var(--white);
+  font-size: 25px;
+  display: none;
+  justify-content: center;
+  align-items: center;
 }
 @media screen and (min-width: 1400px) {
    .plane-shape {

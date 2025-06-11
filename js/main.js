@@ -5,8 +5,7 @@ window.onload = function () {
 document.addEventListener('DOMContentLoaded', function () {
   'use strict';
 
-  const navbar = document.querySelector(".navbar");
-  const navbarCollapse = document.getElementById("navbarSupportedContent");
+
 
   const form = document.getElementById("contactForm");
   const nameInput = document.getElementById("UserName");
@@ -19,6 +18,10 @@ document.addEventListener('DOMContentLoaded', function () {
   const phoneError = document.getElementById("phoneError");
   const messageError = document.getElementById("messageError");
   const formSuccess = document.getElementById("formSuccess");
+    const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+  const navbarCollapse = document.getElementById('navbarSupportedContent');
+  const navbar = document.querySelector(".navbar");
+  const scrollToTopBtn = document.getElementById("scrollToTopBtn");
 
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   const phoneRegex = /^\d{8,15}$/;
@@ -38,8 +41,38 @@ document.addEventListener('DOMContentLoaded', function () {
       navbar.classList.remove("show-bg");
     });
   }
+  window.addEventListener("scroll", () => {
+    if (scrollToTopBtn) {
+      scrollToTopBtn.style.display = window.scrollY > 300 ? "flex" : "none";
+    }
+    if (navbar) {
+      navbar.classList.toggle("scrolled", window.scrollY > 50);
+    }
+  });
 
-  // ✅ Only run this block if all form elements exist
+  // Scroll to top button
+  if (scrollToTopBtn) {
+    scrollToTopBtn.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  }
+
+  // Navbar link behavior
+  if (navLinks && navbarCollapse) {
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        const isNavbarVisible = window.getComputedStyle(navbarCollapse).display !== 'none';
+
+        if (isNavbarVisible && window.innerWidth < 992) {
+          const collapseInstance = bootstrap.Collapse.getInstance(navbarCollapse);
+          if (collapseInstance) {
+            collapseInstance.hide(); 
+          }
+        }
+      });
+    });
+  }
+
   if (
     form &&
     nameInput &&
@@ -69,7 +102,7 @@ document.addEventListener('DOMContentLoaded', function () {
       if (messageInput.value.trim().length >= 5) messageError.innerHTML = "";
     });
 
-    // Form submit
+    // Form submission
     form.addEventListener("submit", function (e) {
       e.preventDefault();
 
@@ -102,15 +135,22 @@ document.addEventListener('DOMContentLoaded', function () {
       }
 
       if (isValid) {
-        const formData = {
-          name: nameInput.value.trim(),
-          email: emailInput.value.trim(),
-          phone: phoneInput.value.trim(),
-          message: messageInput.value.trim()
-        };
+        const name = nameInput.value.trim();
+        const email = emailInput.value.trim();
+        const phone = phoneInput.value.trim();
+        const message = messageInput.value.trim();
 
+        // WhatsApp integration
+        const whatsappNumber = "96892597488";
+        const whatsappMessage =
+          `Name: ${name}%0AEmail: ${email}%0APhone: ${phone}%0AMessage: ${message}`;
+        const whatsappURL = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
+
+        // Optional: Store in localStorage
+        const formData = { name, email, phone, message };
         localStorage.setItem("contactFormData", JSON.stringify(formData));
 
+        // Show success message
         formSuccess.classList.remove("d-none");
 
         setTimeout(() => {
@@ -118,6 +158,9 @@ document.addEventListener('DOMContentLoaded', function () {
         }, 10000);
 
         form.reset();
+
+        // Open WhatsApp with the message
+        window.open(whatsappURL, "_blank");
       }
     });
   }
