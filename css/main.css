@@ -460,7 +460,17 @@ header  .feature-box:hover .icon{
   background-position: center;
   background-size: cover;
 }
-
+.services-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url(../images/services-bg.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  opacity: 0.7;
+  z-index: -1;
+}
 .services-section h2,.tours h2{
   margin-bottom: 10px;
 }
