@@ -164,7 +164,25 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     });
   }
-
+ const destinationsSwiper = new Swiper(".destinationsSwiper", {
+    slidesPerView: 1,
+    spaceBetween: 20,
+    loop: true,
+    grabCursor: true,
+      navigation: {
+      nextEl: ".destinations-next",
+      prevEl: ".destinations-prev",
+    },
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+      pauseOnMouseEnter: true,
+    },
+    breakpoints: {
+      768: { slidesPerView: 2 },
+      992: { slidesPerView: 3 },
+    },
+  });
   // Swiper
   if (document.querySelector(".mySwiper")) {
     const swiper = new Swiper(".mySwiper", {

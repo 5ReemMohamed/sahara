@@ -29,7 +29,7 @@
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0 d-flex justify-content-center align-items-center gap-3">
           <li class="nav-item"><a class="nav-link active" href="#header">Home</a></li>
           <li class="nav-item"><a class="nav-link" href="#about">About Us</a></li>
-          <li class="nav-item"><a class="nav-link" href="tour.html">Tours</a></li>
+          <li class="nav-item"><a class="nav-link" href="tour.html">Adventure Tours & Activities</a></li>
           <li class="nav-item"><a class="nav-link" href="planTrip.html">Plan Your Trip</a></li>
           <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
         </ul>
@@ -47,7 +47,7 @@
             Discover the soul of Arabia with <span class="sahara">Sahara2Go</span> your trusted travel partner
           </h1>
           <p class="text-white">
-            For curated desert safaris, cultural escapes, coastal journeys, and mountain retreats. Whether you’re seeking the thrill of dune bashing in Wahiba Sands, a serene sunset cruise in Muscat, or the rich history of Nizwa and Sur — we bring the authentic essence of Oman and the Emirates to your fingertips.
+            For curated desert safaris, cultural escapes, coastal journeys, and mountain retreats. Whether you’re seeking the thrill of dune bashing in Wahiba Sands, a serene sunset cruise in Muscat, or the rich history of Nizwa and Sur — we bring the authentic essence of UAE (Dubai) and Oman to your fingertips.
           </p>
         </div>
       </div>
@@ -93,56 +93,71 @@
   </div>
  </header>
  <main>
-  <section class="section-padding destination">
-    <div class="container">
-      <div class="heading mb-5" data-aos="fade-in" data-aos-delay="100">
-        <p>Travil Destinations</p>
-        <h2>Trendy Travel Locations</h2>
-      </div>
-      <div class="row g-4">
-        <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="100">
-          <div class="inner inner-1 ">
-              <div class="layer">
-                <h3 class="title">Popular Emirates Destination</h3>
-                <p class="content fst-italic">Experience the vibrant charm of the Emirates with our handpicked popular destinations</p>
-                <a href="tour.html">All Destinations</a>
-              </div>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="100">
-          <div class="inner inner-2">
-              <div class="layer">
-                <h3 class="title">Oman</h3>
-                <p class="content fst-italic">25 + Destination</p>
-                <a href="tour.html">See Destination <i class="fa-solid fa-arrow-right"></i></a>
-              </div>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="100">
-          <div class="inner inner-3">
-              <div class="layer">
-                <h3 class="title">Dubai</h3>
-                <p class="content fst-italic">25 + Destination</p>
-                <a href="">See Destination <i class="fa-solid fa-arrow-right"></i></a>
-              </div>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="100">
-          <div class="inner inner-4">
-              <div class="layer">
-                <h3 class="title">Egypt</h3>
-                <p class="content fst-italic">Coming Soon</p>
-                <a href="tour.html">See Destination <i class="fa-solid fa-arrow-right"></i></a>
-              </div>
-          </div>
-        </div>
-      </div>
+<section class="section-padding destination">
+  <div class="container">
+    <div class="heading mb-5" data-aos="fade-in" data-aos-delay="100">
+      <p>Travel Destinations</p>
+      <h2>Trendy Travel Locations</h2>
     </div>
-  </section>
+
+    <!-- Swiper wrapper -->
+    <div class="swiper destinationsSwiper">
+      <div class="swiper-wrapper">
+
+        <!-- Slide 1 -->
+        <div class="swiper-slide">
+          <div class="inner inner-1">
+            <div class="layer">
+              <h3 class="title">Popular Emirates Destination</h3>
+              <p class="content fst-italic">Experience the vibrant charm of the Emirates with our handpicked popular destinations</p>
+              <a href="tour.html">All Destinations</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="swiper-slide">
+          <div class="inner inner-2">
+            <div class="layer">
+              <h3 class="title">Oman</h3>
+              <p class="content fst-italic">25+ Destinations</p>
+              <a href="tour.html">See Destination <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="swiper-slide">
+          <div class="inner inner-3">
+            <div class="layer">
+              <h3 class="title">Dubai</h3>
+              <p class="content fst-italic">25+ Destinations</p>
+              <a href="#">See Destination <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 4 -->
+        <div class="swiper-slide">
+          <div class="inner inner-4">
+            <div class="layer">
+              <h3 class="title">Egypt</h3>
+              <p class="content fst-italic">Coming Soon</p>
+              <a href="tour.html">See Destination <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="swiper-button-next destinations-next"></div>
+      <div class="swiper-button-prev destinations-prev"></div>
+    </div>
+  </div>
+</section>
+
 <section class="section-padding about" id="about">
    <div class="container">
         <div class="row g-4">
-          <!-- Image Gallery Section -->
          <div class="col-lg-6 mb-5 mb-lg-0" data-aos="fade-up" data-aos-delay="100">
             <div class="row g-4">
               <div class="col-6">
@@ -155,17 +170,16 @@
             </div>
           </div>
           
-          <!-- Content Section -->
           <div class="col-lg-6" data-aos="fade-in" data-aos-delay="100">
             <div class="content-section ps-lg-4">
               <span class="tagline">Get About Us</span>
               <h2 class="main-heading">Discover More, Stress Less with Sahara2Go</h2>
               
               <p class="description lh-lg">
-                At Sahara2Go, we turn every journey into a seamless adventure. From breathtaking landscapes to rich cultural experiences, our expert planning and personalized service make exploring Oman and the Emirates easier, safer, and more exciting than ever.
+                At Sahara2Go, we turn every journey into a seamless adventure. From breathtaking landscapes to rich cultural experiences, our expert planning and personalized service make exploring UAE (Dubai) and Oman easier, safer, and more exciting than ever.
               </p>
               <p class="mt-5 lh-lg">
-                "At Sahara2Go, our mission is to deliver unforgettable travel experiences that connect people with the heart and soul of Oman and the Emirates. With over 45 years of combined expertise, our team is passionate about crafting journeys that are safe, seamless, and rich in local culture. We believe travel is more than a destination; it's a story waiting to be told. Thank you for choosing Sahara2Go, we look forward to being part of your next adventure."
+                "At Sahara2Go, our mission is to deliver unforgettable travel experiences that connect people with the heart and soul of UAE (Dubai) and Oman. With over 45 years of combined expertise, our team is passionate about crafting journeys that are safe, seamless, and rich in local culture. We believe travel is more than a destination; it's a story waiting to be told. Thank you for choosing Sahara2Go, we look forward to being part of your next adventure."
               </p>
               <span class="CEO">– CEO, Sahara2Go</span>
              
@@ -180,7 +194,7 @@
       <div class="col-lg-6">
         <div class="inner pe-lg-4">
           <h2>Trusted Travel Experts with 45 Years of Experience</h2>
-          <p>Sahara2Go stands as a pillar of trust, reliability, and unmatched service in Oman and the Emirates. Our journey began decades ago with a passion for showcasing the hidden gems of the region</p>
+          <p>Sahara2Go stands as a pillar of trust, reliability, and unmatched service in UAE (Dubai) and Oman. Our journey began decades ago with a passion for showcasing the hidden gems of the region</p>
           <div class="row g-4">
             <div class="col-lg-6">
               <div class="inner">
@@ -219,7 +233,7 @@
                   <i class="fa-solid fa-eye"></i>
                 </div>
                 <h3>Our Vision</h3>
-                <p class="text-center">our vision is to become the leading travel and tourism brand in Oman and the Emirates.</p>
+                <p class="text-center">our vision is to become the leading travel and tourism brand in UAE (Dubai) and Oman.</p>
               </div>
             </div>
           </div>
@@ -248,31 +262,38 @@
 <section class="section-padding services-section">
   <div class="container">
     <div class="heading text-center">
-      <h2>What We Do Affordable Oman Travel Guide Services</h2>
-      <p>Explore Oman & Emirates with confidence through our best Affordable Travel Guide Services, where quality experiences fit your budget.</p>
+      <h2>What We Do Affordable UAE (Dubai) and Oman Travel Guide Services</h2>
+      <p>Explore UAE (Dubai) and Oman with confidence through our best Affordable Travel Guide Services, where quality experiences fit your budget.</p>
     </div>
     <div class="row g-4">
       <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
         <div class="service service-1 rounded d-flex flex-column justify-content-center align-items-center">
           <div class="icon"></div>
           <h3 class="text-center">Completed Training Guide</h3>
-          <p>Travel with peace of mind, guided by our fully trained and certified professionals committed to your safety and experience.</p>
+          <p class="px-2">Travel with peace of mind, guided by our fully trained and certified professionals committed to your safety and experience.</p>
           <a href="https://wa.me/96892597488" target="_blank">Make Reservation</a>
         </div>    
       </div>
-      <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
-         <div class="service service-2 rounded d-flex flex-column justify-content-center align-items-center">
-          <div class="icon"></div>
-          <h3 class="text-center">World Insurance Not Included</h3>
-          <p>Enjoy worry-free travel for your safety and peace of mind.</p>
-          <a href="https://wa.me/96892597488" target="_blank">Make Reservation</a>
-        </div>
-      </div>
+     <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+  <div class="service service-2 rounded d-flex flex-column justify-content-center align-items-center text-center">
+    <div class="icon"></div>
+    <h3 class="text-center">Before You Book</h3>
+    <p class="fw-semibold">We recommend:</p>
+    <ul class="text-start px-3 text-white list-unstyled d-flex flex-column gap-4">
+      <li>1. Reserve your flight ticket.</li>
+      <li>2. Book your hotel and travel insurance with your preferred provider.</li>
+      <li>3. Send us your reservation details.</li>
+      <li>4. For Europeans: Visa on arrival in Oman. UAE (Dubai) entry is visa-free.</li>
+    </ul>
+    <a href="https://wa.me/96892597488" target="_blank">Make Reservation</a>
+  </div>
+</div>
+
       <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
          <div class="service service-3 rounded d-flex flex-column justify-content-center align-items-center">
           <div class="icon"></div>
           <h3 class="text-center">Nature Adventures Guide</h3>
-          <p>your compass to Oman and the Emirates’ most breathtaking natural wonders.</p>
+          <p class="px-2">your compass to UAE (Dubai) and Oman most breathtaking natural wonders.</p>
           <a href="https://wa.me/96892597488" target="_blank">Make Reservation</a>
         </div>
       </div>
@@ -280,7 +301,7 @@
          <div class="service service-4 rounded d-flex flex-column justify-content-center align-items-center">
           <div class="icon"></div>
           <h3 class="text-center">Best Travelling Destination</h3>
-          <p>Discover the Oman and the Emirates, where every journey is a story waiting to unfold.</p>
+          <p class="px-2">Discover the UAE (Dubai) and Oman, where every journey is a story waiting to unfold.</p>
           <a href="https://wa.me/96892597488" target="_blank">Make Reservation</a>
         </div>
       </div>
@@ -387,7 +408,7 @@
           <div class="num">
             <span>03</span>
           </div>
-          <h3>Payment On Arrivalt</h3>
+          <h3>Payment On Arrival</h3>
             <p>Enjoy flexibility and peace of mind with our convenient Payment on Arrival option.</p>
         </div>
       </div>
@@ -486,7 +507,7 @@
            <img src="images/logo.png" alt="logo image">
          </a>
            <p  class="text-white pe-lg-5">
-            Discover the magic of the Arabian sands with Sahara2Go, your trusted travel partner for desert safaris, cultural tours, and unforgettable excursions across Oman and the Emirates.
+            Discover the magic of the Arabian sands with Sahara2Go, your trusted travel partner for desert safaris, cultural tours, and unforgettable excursions across UAE (Dubai) and Oman.
           </p>
           <div class="social-links">
             <a href="https://www.instagram.com/sahara2go2025/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
