@@ -163,13 +163,13 @@ header  .feature-box:hover .icon{
 .feature-box {
       background: rgba(0,0,0,0.4);
       border-radius: 10px;
-      padding: 35px 0px;
+      padding: 35px 5px;
       color: var(--white);
        transition: all .5s ease-in-out;
        height: 100%;
 }
-.feature-box h3{
-      font-size: 1.4rem;
+.feature-box h2{
+      font-size: 1.2rem;
       margin-top: 10px;
 }
 .destination h2{
@@ -673,6 +673,7 @@ header  .feature-box:hover .icon{
 .tours .heading .row,.trips .heading .row {
   min-height: 400px !important;
 }
+
  .gallery .swiper {
       width: 100%;
       height: 400px;

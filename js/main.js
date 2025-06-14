@@ -26,12 +26,10 @@ document.addEventListener('DOMContentLoaded', function () {
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   const phoneRegex = /^\d{8,15}$/;
 
-  // Navbar scroll effect
   window.addEventListener("scroll", function () {
     navbar.classList.toggle("scrolled", window.scrollY > 50);
   });
 
-  // Navbar collapse color toggle
   if (navbarCollapse) {
     navbarCollapse.addEventListener("show.bs.collapse", function () {
       navbar.classList.add("show-bg");
@@ -50,14 +48,11 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 
-  // Scroll to top button
   if (scrollToTopBtn) {
     scrollToTopBtn.addEventListener("click", () => {
       window.scrollTo({ top: 0, behavior: "smooth" });
     });
   }
-
-  // Navbar link behavior
   if (navLinks && navbarCollapse) {
     navLinks.forEach(link => {
       link.addEventListener('click', () => {
@@ -85,7 +80,7 @@ document.addEventListener('DOMContentLoaded', function () {
     messageError &&
     formSuccess
   ) {
-    // Real-time validation
+    
     nameInput.addEventListener("input", () => {
       if (nameInput.value.trim() !== "") nameError.innerHTML = "";
     });
@@ -102,7 +97,7 @@ document.addEventListener('DOMContentLoaded', function () {
       if (messageInput.value.trim().length >= 5) messageError.innerHTML = "";
     });
 
-    // Form submission
+    
     form.addEventListener("submit", function (e) {
       e.preventDefault();
 
@@ -140,17 +135,17 @@ document.addEventListener('DOMContentLoaded', function () {
         const phone = phoneInput.value.trim();
         const message = messageInput.value.trim();
 
-        // WhatsApp integration
+    
         const whatsappNumber = "96892597488";
         const whatsappMessage =
           `Name: ${name}%0AEmail: ${email}%0APhone: ${phone}%0AMessage: ${message}`;
         const whatsappURL = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
 
-        // Optional: Store in localStorage
+       
         const formData = { name, email, phone, message };
         localStorage.setItem("contactFormData", JSON.stringify(formData));
 
-        // Show success message
+        
         formSuccess.classList.remove("d-none");
 
         setTimeout(() => {
@@ -159,7 +154,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         form.reset();
 
-        // Open WhatsApp with the message
+      
         window.open(whatsappURL, "_blank");
       }
     });
@@ -183,7 +178,7 @@ document.addEventListener('DOMContentLoaded', function () {
       992: { slidesPerView: 3 },
     },
   });
-  // Swiper
+
   if (document.querySelector(".mySwiper")) {
     const swiper = new Swiper(".mySwiper", {
       effect: "coverflow",
@@ -214,7 +209,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  // AOS
+ 
   AOS.init({
     offset: 120,
     duration: 1000,
