@@ -464,6 +464,8 @@ header  .feature-box:hover .icon{
   line-height: 125%;
   margin-bottom: 25px;
 }
+
+
 .content-section p,.vision p,.tours .heading p,.hotel p,.flight p,.contact .heading p,.oman-video p{
     font-size: 16px;
     font-weight: 400;
@@ -521,35 +523,35 @@ header  .feature-box:hover .icon{
 }
 .service-1{
   background-image: linear-gradient(rgba(0,0,0,.5),rgb(0,0,0,.5)),url(../images/service1.jpg);
-  height: 400px;
+  height: 500px;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 .service-2{
   background-image: linear-gradient(rgba(0,0,0,.5),rgb(0,0,0,.5)),url(../images/service2.jpg);
-  height: 400px;
+  height: 500px;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 .service-3{
   background-image: linear-gradient(rgba(0,0,0,.5),rgb(0,0,0,.5)),url(../images/service3.jpeg);
-  height: 400px;
+  height: 500px;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 .service-4{
   background-image: linear-gradient(rgba(0,0,0,.5),rgb(0,0,0,.5)),url(../images/service4.jpg);
-  height: 400px;
+  height: 500px;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 .services-section h3{
   color: var(--primary-color);
-  font-size: 2.7rem;
+  font-size: 2rem;
   font-weight: 600;
 }
 .services-section .service p{
@@ -557,7 +559,7 @@ header  .feature-box:hover .icon{
   text-align: center;
 }
 .services-section .service a,.tours a,.hotel a,.flight a{
-  width: 100%;
+  width: 90%;
   text-align: center;
   padding: 15px 35px;
   text-decoration: none;
@@ -1088,6 +1090,9 @@ footer .gmt-logo{
   }
     .destination .inner-2 .layer,.destination .inner-3 .layer,.destination .inner-4 .layer{
    transform: translateY(102px);
+}
+.services-section h3{
+  font-size: 2.5rem;
 }
 .img2 {
   bottom: 250px;
