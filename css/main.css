@@ -48,7 +48,7 @@ header {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  position: relative; /* Required for absolute positioning of ::after */
+  position: relative; 
   overflow: hidden;
 }
 header::after {
@@ -57,10 +57,10 @@ header::after {
   bottom: -3%;
   left: 0;
   width: 100%;
-  height: 100px; /* Adjust height to match image */
+  height: 100px; 
   background: url('../images/bottom-bg.png') no-repeat bottom center;
   background-size: cover;
-  pointer-events: none; /* Ensures it doesn't interfere with clicks */
+  pointer-events: none; 
   z-index: 1;
   height: 80px;
 }
@@ -70,6 +70,37 @@ h1{
 }
 .sahara{
 color: var(--primary-color);
+}
+.language-flags {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  z-index: 3;
+}
+
+.lang-flag {
+  width: 50px;
+  height: auto;
+  cursor: pointer;
+  opacity: 1;
+  transition: all 0.2s ease;
+  border-radius: 2px;
+  border: 1px solid transparent;
+}
+
+.lang-flag:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.lang-flag.active {
+  opacity: 1;
+  border-color: var(--primary-color);
+  transform: scale(1.1);
 }
 header .icon{
   width: 50px;
@@ -160,24 +191,29 @@ header  .feature-box:hover .icon{
   width: 100%;
   display: block;
 }
+.equal-height {
+  height: 100%;
+}
 .feature-box {
       background: rgba(0,0,0,0.4);
       border-radius: 10px;
       padding: 35px 5px;
       color: var(--white);
        transition: all .5s ease-in-out;
-       height: 100%;
+       height: 100% !important;
 }
 .feature-box h2{
       font-size: 1.2rem;
       margin-top: 10px;
 }
+
 .destination h2{
   color: var(--primary-color);
   font-size: 3rem;
   margin-top: 0;
   font-weight: 600;
 }
+
 .destination p{
   font-style: italic;
   color: var(--secondary-color);
@@ -521,7 +557,7 @@ header  .feature-box:hover .icon{
   text-align: center;
 }
 .services-section .service a,.tours a,.hotel a,.flight a{
-  width: 70%;
+  width: 100%;
   text-align: center;
   padding: 15px 35px;
   text-decoration: none;
@@ -537,7 +573,7 @@ header  .feature-box:hover .icon{
   background-color: var(--white);
   color: var(--secondary-color);
   border: 1px solid var(--white);
-  transform: translateY(-10px);
+  transform: translateY(-5px);
 }
 .vision .inner .card:hover{
   transform: translateY(-10px);
@@ -619,9 +655,9 @@ header  .feature-box:hover .icon{
 .tours .inner-img p,.hotel .inner-img p,.flight .inner-img p{
   color: var(--white);
   font-size: 1rem;
-  margin-bottom: 40px;
+  margin-bottom: 10px;
   border-bottom: 1px dashed var(--secondary-color);
-  padding-bottom: 26px;
+  padding-bottom: 10px;
 }
 .tours .date{
   font-style: italic;
@@ -1024,6 +1060,14 @@ footer .gmt-logo{
   right: -5%;
 }
 
+
+.tours a{
+  width: 90%;
+  position: absolute;
+  bottom: 20px;
+  left: 10;
+}
+
 }
 @media screen and (min-width:992px) {
   header::after {
@@ -1053,6 +1097,9 @@ footer .gmt-logo{
   border-right: 1px solid var(--secondary-color);
   padding-right: 5px;
 }
+.tours a{
+  bottom: 6px;
+}
 }
 @media screen and (min-width:1200px){
   .destination .inner .layer {
@@ -1067,13 +1114,13 @@ footer .gmt-logo{
   right: -5%;
 }
 .services-section .service a,.tours a,.hotel a,.flight a{
-  width: 60%;
+  width: 80%;
 
 }
 }
   .fixed-contact-buttons {
   position: fixed;
-  bottom: 20px;
+  bottom: 80px;
   right: 20px;
   display: flex;
   flex-direction: column;
@@ -1083,7 +1130,7 @@ footer .gmt-logo{
 .fixed-scroll{
   position: fixed;
   bottom: 20px;
-  left: 20px;
+  right: 20px;
   display: flex;
   flex-direction: column;
   gap: 15px;

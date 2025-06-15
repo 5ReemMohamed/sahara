@@ -5,7 +5,8 @@ window.onload = function () {
 document.addEventListener('DOMContentLoaded', function () {
   'use strict';
 
-
+  localStorage.removeItem('lang');
+  let currentLang = 'en';
 
   const form = document.getElementById("contactForm");
   const nameInput = document.getElementById("UserName");
@@ -18,13 +19,34 @@ document.addEventListener('DOMContentLoaded', function () {
   const phoneError = document.getElementById("phoneError");
   const messageError = document.getElementById("messageError");
   const formSuccess = document.getElementById("formSuccess");
-    const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+
+  const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
   const navbarCollapse = document.getElementById('navbarSupportedContent');
   const navbar = document.querySelector(".navbar");
   const scrollToTopBtn = document.getElementById("scrollToTopBtn");
 
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   const phoneRegex = /^\d{8,15}$/;
+
+  if (nameError) nameError.textContent = "";
+  if (emailError) emailError.textContent = "";
+  if (phoneError) phoneError.textContent = "";
+  if (messageError) messageError.textContent = "";
+
+  function clearErrorOnInput(inputEl, errorEl, validatorFn = null) {
+    if (inputEl && errorEl) {
+      inputEl.addEventListener('input', () => {
+        if (!validatorFn || validatorFn(inputEl.value.trim())) {
+          errorEl.textContent = "";
+        }
+      });
+    }
+  }
+
+  clearErrorOnInput(nameInput, nameError, value => value !== "");
+  clearErrorOnInput(emailInput, emailError, value => emailRegex.test(value));
+  clearErrorOnInput(phoneInput, phoneError, value => phoneRegex.test(value));
+  clearErrorOnInput(messageInput, messageError, value => value.length >= 5);
 
   window.addEventListener("scroll", function () {
     navbar.classList.toggle("scrolled", window.scrollY > 50);
@@ -34,98 +56,97 @@ document.addEventListener('DOMContentLoaded', function () {
     navbarCollapse.addEventListener("show.bs.collapse", function () {
       navbar.classList.add("show-bg");
     });
-
     navbarCollapse.addEventListener("hide.bs.collapse", function () {
       navbar.classList.remove("show-bg");
     });
   }
-  window.addEventListener("scroll", () => {
-    if (scrollToTopBtn) {
-      scrollToTopBtn.style.display = window.scrollY > 300 ? "flex" : "none";
-    }
-    if (navbar) {
-      navbar.classList.toggle("scrolled", window.scrollY > 50);
-    }
-  });
 
   if (scrollToTopBtn) {
+    window.addEventListener("scroll", () => {
+      scrollToTopBtn.style.display = window.scrollY > 300 ? "flex" : "none";
+    });
+
     scrollToTopBtn.addEventListener("click", () => {
       window.scrollTo({ top: 0, behavior: "smooth" });
     });
   }
+
   if (navLinks && navbarCollapse) {
     navLinks.forEach(link => {
       link.addEventListener('click', () => {
         const isNavbarVisible = window.getComputedStyle(navbarCollapse).display !== 'none';
-
         if (isNavbarVisible && window.innerWidth < 992) {
           const collapseInstance = bootstrap.Collapse.getInstance(navbarCollapse);
           if (collapseInstance) {
-            collapseInstance.hide(); 
+            collapseInstance.hide();
           }
         }
       });
     });
   }
 
-  if (
-    form &&
-    nameInput &&
-    emailInput &&
-    phoneInput &&
-    messageInput &&
-    nameError &&
-    emailError &&
-    phoneError &&
-    messageError &&
-    formSuccess
-  ) {
-    
-    nameInput.addEventListener("input", () => {
-      if (nameInput.value.trim() !== "") nameError.innerHTML = "";
-    });
+  const langFlags = document.querySelectorAll('.lang-flag');
+  const supportedLanguages = ['en', 'de', 'fr', 'it'];
 
-    emailInput.addEventListener("input", () => {
-      if (emailRegex.test(emailInput.value.trim())) emailError.innerHTML = "";
+  function updateLanguage(lang) {
+    currentLang = lang;
+    document.documentElement.lang = lang;
+    document.querySelectorAll('[data-en][data-de][data-fr][data-it]').forEach(el => {
+      const translation = el.getAttribute(`data-${lang}`);
+      if (translation) {
+        el.setAttribute('data-current', translation);
+        if ('placeholder' in el && el.placeholder !== undefined) {
+          el.placeholder = translation;
+        } else if (el.textContent.trim() !== "") {
+          el.textContent = translation;
+        }
+      }
     });
-
-    phoneInput.addEventListener("input", () => {
-      if (phoneRegex.test(phoneInput.value.trim())) phoneError.innerHTML = "";
+    langFlags.forEach(flag => {
+      flag.classList.toggle('active', flag.dataset.lang === lang);
     });
+  }
 
-    messageInput.addEventListener("input", () => {
-      if (messageInput.value.trim().length >= 5) messageError.innerHTML = "";
+  if (langFlags.length) {
+    updateLanguage(currentLang);
+    langFlags.forEach(flag => {
+      flag.addEventListener('click', () => {
+        const lang = flag.dataset.lang;
+        if (supportedLanguages.includes(lang)) {
+          updateLanguage(lang);
+        }
+      });
     });
+  }
 
-    
+  if (form && nameInput && emailInput && phoneInput && messageInput && nameError && emailError && phoneError && messageError && formSuccess) {
     form.addEventListener("submit", function (e) {
       e.preventDefault();
-
       let isValid = true;
-
       formSuccess.classList.add("d-none");
-      nameError.innerHTML = "";
-      emailError.innerHTML = "";
-      phoneError.innerHTML = "";
-      messageError.innerHTML = "";
+
+      nameError.textContent = "";
+      emailError.textContent = "";
+      phoneError.textContent = "";
+      messageError.textContent = "";
 
       if (nameInput.value.trim() === "") {
-        nameError.innerHTML = "Name is required";
+        nameError.textContent = nameError.getAttribute(`data-${currentLang}`);
         isValid = false;
       }
 
       if (!emailRegex.test(emailInput.value.trim())) {
-        emailError.innerHTML = "Enter a valid email address";
+        emailError.textContent = emailError.getAttribute(`data-${currentLang}`);
         isValid = false;
       }
 
       if (!phoneRegex.test(phoneInput.value.trim())) {
-        phoneError.innerHTML = "Enter a valid phone number (digits only)";
+        phoneError.textContent = phoneError.getAttribute(`data-${currentLang}`);
         isValid = false;
       }
 
       if (messageInput.value.trim().length < 5) {
-        messageError.innerHTML = "Message must be at least 5 characters";
+        messageError.textContent = messageError.getAttribute(`data-${currentLang}`);
         isValid = false;
       }
 
@@ -135,36 +156,30 @@ document.addEventListener('DOMContentLoaded', function () {
         const phone = phoneInput.value.trim();
         const message = messageInput.value.trim();
 
-    
         const whatsappNumber = "96892597488";
-        const whatsappMessage =
-          `Name: ${name}%0AEmail: ${email}%0APhone: ${phone}%0AMessage: ${message}`;
+        const whatsappMessage = `Name: ${name}%0AEmail: ${email}%0APhone: ${phone}%0AMessage: ${message}`;
         const whatsappURL = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
 
-       
         const formData = { name, email, phone, message };
         localStorage.setItem("contactFormData", JSON.stringify(formData));
 
-        
         formSuccess.classList.remove("d-none");
-
         setTimeout(() => {
           formSuccess.classList.add("d-none");
         }, 10000);
 
         form.reset();
-
-      
         window.open(whatsappURL, "_blank");
       }
     });
   }
- const destinationsSwiper = new Swiper(".destinationsSwiper", {
+
+  const destinationsSwiper = new Swiper(".destinationsSwiper", {
     slidesPerView: 1,
     spaceBetween: 20,
     loop: true,
     grabCursor: true,
-      navigation: {
+    navigation: {
       nextEl: ".destinations-next",
       prevEl: ".destinations-prev",
     },
@@ -209,7 +224,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
- 
   AOS.init({
     offset: 120,
     duration: 1000,
