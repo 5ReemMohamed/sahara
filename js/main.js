@@ -156,7 +156,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const phone = phoneInput.value.trim();
         const message = messageInput.value.trim();
 
-        const whatsappNumber = "96892597488";
+        const whatsappNumber = "96898083317";
         const whatsappMessage = `Name: ${name}%0AEmail: ${email}%0APhone: ${phone}%0AMessage: ${message}`;
         const whatsappURL = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
 
